@@ -1,0 +1,177 @@
+.card-saque-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative; 
+}
+
+.card-saque {
+  box-shadow: 7px 7px 7px 7px #cbcbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative; /* Define um contêiner de referência para o ícone */
+}
+
+/* .icon-container {
+  position: absolute;
+  top: 20px; 
+  right: 575px; 
+  z-index: 10; 
+} */
+
+.bi-arrow-left-square {
+  font-size: 30px; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+.card-login-titulo {
+  width: 85%; /* Garante que o título ocupe toda a largura do contêiner */
+}
+.title {
+  width: 100%;
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-voltar {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-voltar:hover {
+  color: #cc0000;
+}
+
+.saque-title {
+  font-size: 30px;
+  text-align: left;
+  color: #000;
+  padding-top: 8px;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-decoration-color: #FB8207;
+}
+
+.saque-sub-title {
+  font-size: 20px;
+  text-align: left;
+  color: #000;
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+.value0 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.input0 {
+  background-color: #E7E7E7;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 270px;
+  height: 45px;
+}
+
+.input0::-webkit-inner-spin-button, .input1::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#btn-02 {
+  width: 170px;
+  height: 50px;
+  background-color: #FB8207;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; 
+  margin-bottom: 20px; /* Adiciona espaço abaixo do botão */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-saque {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .input0 {
+    width: 100%;
+  }
+
+  #btn-02 {
+    width: 100%;
+  }
+
+  .icon-container {
+    top: -5px; /* Ajuste conforme necessário para aproximar do card */
+    right: 5px; /* Ajuste conforme necessário para aproximar do card */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-saque {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input0 {
+    padding: 8px;
+  }
+
+  #btn-02 {
+    padding: 10px;
+  }
+
+  .saque-title {
+    font-size: 24px;
+  }
+
+  .icon-container {
+    top: 5px; /* Ajuste conforme necessário para aproximar do card */
+    right: 45px; /* Ajuste conforme necessário para aproximar do card */
+  }
+}

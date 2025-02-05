@@ -1,0 +1,26 @@
+<section class="card-transferencia-container">
+    <form class="card-transferencia">
+      <div class="icon-container" (click)="voltar()">
+        <i class="bi bi-arrow-left-square"></i>
+      </div>
+      <label class="title">
+        <h1 class="transferencia-title">Transferência</h1>
+        <h2 class="transferencia-sub-title">Saldo: R$ {{ conta.saldo }}</h2>
+      </label>
+      <div class="value0">
+        <input type="text" class="input0" placeholder="Agência do destinatário" [(ngModel)]="agenciaDestinatario" name="agenciaDestinatario" required>
+      </div>
+      
+      <div class="value1">
+        <input type="text" class="input1" placeholder="Conta do destinatário" [(ngModel)]="numContaDestino" name="contaDestinatario" required>
+      </div> 
+      <div class="value2">
+        <input type="number" class="input2" placeholder="Valor da transferência" [(ngModel)]="valor" name="valorTransferencia" required>
+      </div>
+      
+      <div class="button-container">
+        <button id="btn-02" type="button" (click)="transferir()">Confirmar</button>
+      </div>
+    </form>
+    
+  </section>

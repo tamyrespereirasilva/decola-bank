@@ -1,0 +1,48 @@
+.container {
+    max-width: 600px; /* Ajuste este valor conforme necessário */
+    margin-bottom: 50px;
+    
+}
+
+.form-label {
+    color: rgb(108, 117, 126);
+    font-weight: 500;
+}
+
+.form-check-label {
+    font-weight: 500;
+}
+
+.input-custom {
+    border: 2px solid #ff7900; /* Cor tema do site */
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-custom:focus {
+    border-color: #ff7900; /* Cor tema do site ao focar */
+    outline: none;
+}
+
+.action-button {
+    background-color: #ff7900;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover   {
+    background-color: #fc8207; 
+}
+
+.modal-title, .modal-body p {
+    font-weight: normal; 
+}
+
+.politica-privacidade{
+    color: #ff7900;
+    text-decoration: none;
+}

@@ -1,0 +1,163 @@
+.card-extrato-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card-extrato {
+  box-shadow: 7px 7px 7px 7px #cbcbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative; /* Adicionado */
+}
+
+.icon-container {
+  position: absolute; /* Adicionado */
+  top: 30px; /* Ajuste conforme necessário */
+  right: 40px; /* Ajuste conforme necessário */
+  cursor: pointer;
+}
+
+.bi-arrow-left-square {
+  font-size: 30px; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+.title {
+  width: 100%;
+}
+
+.extrato-title {
+  font-size: 30px;
+  text-align: left;
+  color: #000;
+  padding-top: 8px;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-decoration-color: #FB8207;
+}
+
+.extrato-sub-title {
+  font-size: 20px;
+  text-align: left;
+  color: #000;
+  padding-bottom: 50px;
+  padding-left: 20px;
+}
+
+.value0 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.section {
+  width: 270px;
+  height: 45px;
+  background-color: #E7E7E7;
+  border-radius: 5px;
+}
+
+.button-extrato-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#btn-02 {
+  width: 200px;
+  height: 50px;
+  background-color: #FB8207;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Estilo para a tabela de extrato */
+.extrato-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.extrato-table th, .extrato-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.extrato-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button-print-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#btn-print {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btn-print:hover {
+  background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-extrato {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #btn-02 {
+    width: 100%;
+  }
+
+  .extrato-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-extrato {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #btn-02 {
+    padding: 10px;
+  }
+
+  .extrato-title {
+    font-size: 24px;
+  }
+
+  .extrato-table th, .extrato-table td {
+    padding: 5px;
+  }
+}

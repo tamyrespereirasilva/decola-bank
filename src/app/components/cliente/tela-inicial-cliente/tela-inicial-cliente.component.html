@@ -1,0 +1,61 @@
+<section class="container">
+  <div class="hello">
+    <h2>Olá, {{conta.nomeCliente}}</h2>
+  </div>
+  <div class="saldo">
+    <h3>Saldo: {{conta.saldo| currency: 'BRL'}}</h3>
+  </div>
+  <div class="card-container">
+    <!-- card 01 -->
+    <div class="card" routerLink="/saque"  style="cursor: pointer;"  data-bs-whatever="Saque">
+      <img ngSrc="assets/saque.png" [width]="194" [height]="100" class="card-img-top" alt="fatura">
+      <div class="card-body">
+        <h5 class="card-title">Saque</h5>
+      </div>
+    </div>
+ 
+    <!-- card 02 -->
+    <div class="card" routerLink="/pagamento" style="cursor: pointer;" data-bs-whatever="Pagamento">
+      <img ngSrc="assets/boleto.png" [width]="194" [height]="100" class="card-img-top" alt="pagamento">
+      <div class="card-body">
+        <h5 class="card-title">Pagamento</h5>
+      </div>
+    </div>
+ 
+ 
+     <!-- card 03 -->
+     <div class="card" routerLink="/extrato" style="cursor: pointer;" data-bs-whatever="Extrato">
+      <img ngSrc="assets/extrato.png" [width]="194" [height]="100" class="card-img-top" alt="fatura">
+      <div class="card-body">
+        <h5 class="card-title">Extrato</h5>
+      </div>
+    </div>
+   
+   <!-- card 04 -->
+     <div class="card" routerLink="/deposito" style="cursor: pointer;"  data-bs-whatever="Deposito">
+      <img ngSrc="assets/deposito.png" [width]="194" [height]="100" class="card-img-top" alt="fatura">
+
+      <div class="card-body">
+        <h5 class="card-title">Depósito</h5>
+      </div>
+    </div>
+  
+     <!-- card 05 -->
+     <div class="card" routerLink="/transferencia" style="cursor: pointer;" data-bs-whatever="Transferencia">
+      <img ngSrc="assets/transferencia.png" [width]="194" [height]="100" class="card-img-top" alt="transferencia">
+     <div class="card-body">
+        <h5 class="card-title">Transferência</h5>
+      </div>
+    </div>
+   
+ 
+    <!-- card 06 -->
+    <div class="card" routerLink="/pix" style="cursor: pointer;" data-bs-whatever="Pix">
+      <img ngSrc="assets/pix-img.png" [width]="194" [height]="100" class="card-img-top" alt="fatura">
+      <div class="card-body">
+        <h5 class="card-title">Pix</h5>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,107 @@
+/* Geral */
+
+.card-title-main-app{
+  color: #ff7900;
+  margin-bottom: 40px;
+  margin-top: 40px;  
+}
+.card.custom-card {
+  position: relative; /* Para posicionar o overlay */
+  overflow: hidden; /* Garante que o overlay fique dentro do card */
+  border: none; /* Remove borda padrão do Bootstrap */
+  margin: 0; /* Remove margens adicionais */
+  padding: 0; /* Remove padding */
+  box-shadow: none; /* Remove sombras adicionais */
+}
+
+.card-img {
+  display: block; /* Remove qualquer comportamento inline */
+  width: 100%; /* Garante que a imagem ocupe todo o card */
+  /* height: auto;  */
+  margin: 0; /* Remove margens adicionais */
+  padding: 0; /* Remove padding adicional */
+  border: none; /* Remove borda */
+  object-fit: cover; /* Faz a imagem cobrir o card */
+}
+
+/* Overlay customizado */
+.custom-card-overlay {
+  position: absolute;
+  bottom: 20px; /* Ajuste conforme necessário */
+  left: 30px;
+  color: white; /* Cor do texto */
+  font-size: 40px; /* Ajuste o tamanho do texto */
+  line-height: 1.2;
+  max-width: 80%; /* Evita que o texto ultrapasse o card */
+  padding: 0;
+  margin: 0;
+  border-radius: 5px; 
+}
+
+/* Para o layout da coluna */
+.d-flex.flex-column {
+  gap: 15px; /* Espaçamento uniforme entre as imagens */
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove padding */
+}
+
+
+.card.custom-card:hover img {
+  filter: brightness(80%); /* Escurece ainda mais ao passar o mouse */
+}
+
+
+.card.custom-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* Escurece a imagem */
+  transition: filter 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+}
+
+.modal-content .modal-body p {
+  font-weight: normal !important;
+  text-align: left;
+}
+
+
+@media (max-width: 768px) {
+ 
+  .custom-card:not(.last-image) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .card-img01{
+    width:300x ;
+    height:300px ;
+  }
+  .card-img02{
+    width:350px ;
+    height:350px ;
+  }
+  .card-img03{
+    margin-top: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+
+    width:350px ;
+    height:350px;   
+  }
+
+  .custom-card-overlay {
+    font-size: 20px; /* Ajuste o tamanho do texto */
+    
+  }
+
+  @media(max-width: 560px){
+    .card-img03{
+      margin-top: 15px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width:350px ;
+      height:540px;   
+    }
+
+  }
+}

@@ -1,0 +1,121 @@
+.dicas-seguranca {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+}
+
+.btn {
+    background-color: #ff7900;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.dicas-seguranca .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: grey;
+}
+.dicas-seguranca p {
+    color: grey;
+}
+
+.dicas-seguranca p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.text-column {
+    background-color: #e3dbdb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    /* Ajusta o espaçamento interno */
+
+}
+
+.accordion-button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #141313;
+    border-color: #FB8207;
+    /* Laranja para a borda ativa */
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(255, 171, 64, 0.5);
+    /* Laranja suave no foco */
+    border-color: #ffab40;
+}
+
+.accordion-body {
+    color: #333;
+    font-weight: normal;
+    /* Remove o negrito */
+    line-height: 1.6;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+}
+
+
+@media (max-width: 768px) {
+    .dicas-seguranca {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .dicas-seguranca .card-title {
+        font-size: 1.5rem;
+    }
+
+    .dicas-seguranca p {
+        font-size: 0.95rem;
+    }
+
+    .dicas-seguranca btn {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .dicas-seguranca {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .dicas-seguranca .card-title {
+        font-size: 20px;
+    }
+
+    .dicas-seguranca p {
+        display: none;
+    }
+
+    .dicas-seguranca btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .security-image {
+        max-width: 80%;
+        /* Ajusta o tamanho da imagem em telas muito pequenas */
+        margin: 0 auto;
+        /* Centraliza a imagem */
+    }
+}

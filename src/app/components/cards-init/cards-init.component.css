@@ -1,0 +1,88 @@
+
+/* Estilo para o título principal do app */
+.card-title-main-app{
+  font-size: 40px;
+  color: #FB8207;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  animation: titleAnimation 1s ease-out;
+}
+
+/* Animação do título */
+@keyframes titleAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos do card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha itens à esquerda */
+  justify-content: flex-start; /* Alinha itens ao topo */
+  height: 230px !important;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px; /* Adiciona um espaçamento interno */
+ 
+}
+
+/* Efeito de hover no card */
+.card:hover {
+  transform: translateY(-5px); /* Eleva o card */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+  border: 1.5px solid #FB8207; /* Borda laranja */
+}
+
+/* Estilo da imagem no card */
+.card img {
+  margin: 0; /* Remove margens adicionais */
+  margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Título do card */
+.card-title {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Texto do card */
+.card-text {
+  color: rgb(152, 150, 150);
+  font-weight: 500;
+}
+
+/* @media (max-width: 768px) {
+  .card {
+    height: 250px !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 220px !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+  }
+} */

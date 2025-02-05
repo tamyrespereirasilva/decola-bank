@@ -1,0 +1,62 @@
+#btn-01 {
+    width: 466px;
+    height: 65px;
+    background-color: #FB8207;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+    margin-top: 20px; 
+    cursor: pointer;
+    border-radius: 16px; 
+}
+#btn-02 {
+    width: 353px;
+    height: 62px;
+    background-color: #FB8207;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    margin-top: 20px; 
+    cursor: pointer;
+    border-radius: 16px; 
+}
+#btn-03 {
+    width: 220px;
+    height: 49px;
+    background-color: #FB8207;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    margin-top: 20px; 
+    cursor: pointer;
+    border-radius: 16px; 
+}
+#btn-04 {
+    width: 145px;
+    height: 49px;
+    background-color: #fb1707;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    margin-top: 20px; 
+    cursor: pointer;
+    border-radius: 16px; 
+}
+
+
+#btn-01:hover, #btn-02:hover, #btn-03:hover, #btn-04:hover {
+    background-color: #e67300; 
+}
+
+#btn-01, #btn-02, #btn-03, #btn-04 {
+    display: block;  
+    margin-bottom: 10px; 
+  }

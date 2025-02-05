@@ -1,0 +1,65 @@
+/* Estilos básicos da navbar */
+.custom-navbar {
+  background-color: #ff7900; 
+}
+  
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-menu {
+  color: #FFFFFF;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+} 
+
+.dropdown-item:active {
+  background-color: transparent; 
+  color: inherit; 
+}
+  
+/* Flexbox para manter os itens lado a lado */
+.custom-navbar .container {
+  display: flex;
+  justify-content: space-between; /* Espaçamento entre logo e dropdown */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+.custom-icon{
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .custom-navbar .navbar-brand {
+    font-size: 16px; /* Reduz tamanho do texto do título */
+    display: flex; /* Garante que logo e título fiquem alinhados */
+    align-items: center;
+    gap: 5px; /* Espaçamento entre logo e texto */
+  }
+  
+  .navbar .nav-link {
+    font-size: 14px; /* Reduz tamanho do texto do dropdown */
+  }
+  
+  .navbar .dropdown-menu {
+    font-size: 14px; /* Reduz tamanho das opções do dropdown */
+    text-align: left;
+    width: auto; /* Ajusta largura para não ocupar espaço desnecessário */
+
+  }
+}
+  
+@media (max-width: 480px) {
+  .custom-navbar .navbar-brand {
+    font-size: 14px; /* Reduz tamanho do texto ainda mais */
+    gap: 3px; /* Reduz espaço entre logo e texto */
+  }
+  
+  .navbar .nav-link {
+    font-size: 12px; /* Reduz tamanho do texto do botão dropdown */
+  }
+  
+  .navbar .dropdown-menu {
+    font-size: 12px;
+  }
+}

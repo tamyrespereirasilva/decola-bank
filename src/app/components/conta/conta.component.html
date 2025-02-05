@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-6 mt-3">
+ 
+      <div class="card shadow border-0 rounded-3">
+        <div class="card-body">
+          <div class="col-md-6 mb-4">
+            <h2 class="card-title">{{contas.nomeCliente}}</h2>
+            <h6><strong>CPF </strong>{{contas.cpfCliente}}</h6>
+          </div>
+ 
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p><strong>Número da Conta:</strong> {{contas.numConta}}</p>
+              <p><strong>Agência:</strong> {{contas.agencia}}</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>Data de Criação:</strong> {{contas.dataCriacao | date:'dd/MM/yyyy'}}</p>
+              <p><strong>Tipo de Conta:</strong> {{ getTipoContaDescricao(contas.tipoConta) }}</p>
+            </div>
+          </div>
+ 
+          <div class="d-flex justify-content-between mt-4">
+            <a [routerLink]="['/clientes']" class="btn btn-outline-secondary">
+              Voltar
+            </a>
+            <button class="btn btn-outline-danger" (click)="abrirModal()">
+              Encerrar Conta
+            </button>
+          </div>
+        </div>
+ 
+        <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Encerrar conta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Tem certeza que deseja encerrar esta conta? Essa ação não poderá ser desfeita.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" (click)="fecharModal()">Voltar</button>
+                <button type="button" class="btn btn-outline-danger" (click)="encerrarConta()">Encerrar Conta</button>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+ 

@@ -1,0 +1,131 @@
+<div class="container mt-2">
+  <div class="p-4 shadow-sm">
+    <div class="d-flex justify-content-end">
+      <button class="btn-close" (click)="fecharFormulario()"></button>
+    </div>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <h4 class="mb-3">Insira seus dados</h4>
+
+      <div class="mb-2">
+        <label for="cpf" class="form-label">CPF</label>
+        <input 
+          id="cpf" 
+          type="text" 
+          class="form-control" 
+          name="cpf" 
+          [(ngModel)]="cpf" 
+          #cpfModel="ngModel"
+          required 
+          pattern="^\d{11}$"
+          placeholder="Digite seu CPF">
+        <div *ngIf="cpfModel.touched && cpfModel.invalid">
+          <div *ngIf="cpfModel.errors?.['required']" class="text-danger">
+            O CPF é obrigatório.
+          </div>
+          <div *ngIf="cpfModel.errors?.['pattern']" class="text-danger">
+            O CPF deve conter 11 dígitos e apenas números.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="nomeCompleto" class="form-label">Nome completo</label>
+        <input 
+          id="nomeCompleto" 
+          type="text" 
+          class="form-control" 
+          name="nomeCompleto" 
+          [(ngModel)]="nomeCompleto" 
+          #nomeCompletoModel="ngModel"
+          required 
+          placeholder="Digite seu nome completo">
+        <div *ngIf="nomeCompletoModel.touched && nomeCompletoModel.invalid">
+          <div *ngIf="nomeCompletoModel.errors?.['required']" class="text-danger">
+            O nome completo é obrigatório.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="email" class="form-label">E-mail</label>
+        <input 
+          id="email" 
+          type="email" 
+          class="form-control" 
+          name="email" 
+          [(ngModel)]="email" 
+          #emailModel="ngModel"
+          required 
+          email 
+          placeholder="Digite seu e-mail">
+        <div *ngIf="emailModel.touched && emailModel.invalid">
+          <div *ngIf="emailModel.errors?.['required']" class="text-danger">
+            O e-mail é obrigatório.
+          </div>
+          <div *ngIf="emailModel.errors?.['email']" class="text-danger">
+            Precisamos de um e-mail válido.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="confirmacaoEmail" class="form-label">Confirmação de e-mail</label>
+        <input 
+          id="confirmacaoEmail" 
+          type="email" 
+          class="form-control" 
+          name="confirmacaoEmail" 
+          [(ngModel)]="confirmacaoEmail" 
+          #confirmacaoEmailModel="ngModel"
+          required 
+          placeholder="Confirme seu e-mail">
+        <div *ngIf="confirmacaoEmailModel.touched && confirmacaoEmailModel.invalid">
+          <div *ngIf="confirmacaoEmailModel.errors?.['required']" class="text-danger">
+            A confirmação de e-mail é obrigatória.
+          </div>
+          <div *ngIf="confirmacaoEmailModel.value !== emailModel.value" class="text-danger">
+            Os e-mails não coincidem.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-check mb-3">
+        <input 
+          id="politica" 
+          type="checkbox" 
+          class="form-check-input" 
+          name="politica" 
+          [(ngModel)]="politica" 
+          #politicaModel="ngModel"
+          required>
+        <label for="politica" class="form-check-label">
+          Eu li, estou ciente das condições de tratamento dos meus dados pessoais e dou meu consentimento, quando aplicável, conforme descrito nesta <a class="politica-privacidade">Política de Privacidade</a>
+        </label>
+        <div *ngIf="politicaModel.touched && politicaModel.invalid">
+          <div *ngIf="politicaModel.errors?.['required']" class="text-danger">
+            Você deve concordar com a política de privacidade.
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn w-100 action-button" [disabled]="form.invalid">Enviar</button>
+    </form>
+  </div>
+
+  <div class="modal" tabindex="-1" [ngClass]="{'show': mostrarPopup}" style="display: block;" *ngIf="mostrarPopup">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Formulário enviado com sucesso</h5>
+          <button type="button" class="btn-close" (click)="mostrarPopup = false"></button>
+        </div>
+        <div class="modal-body">
+          <p>Em breve você receberá por e-mail os próximos passos para a conclusão de abertura da sua conta.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn action-button" (click)="concluir()">Concluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

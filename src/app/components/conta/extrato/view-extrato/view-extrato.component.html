@@ -1,0 +1,44 @@
+<section class="card-extrato-container">
+  <h1 class="extrato-title">Extrato</h1>
+  <table *ngIf="transacoes.length > 0" class="extrato-table">
+    <thead class="extrato-table-title">
+      <tr>
+        <th>Titular</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Tipo</th>
+        <th>Código</th>
+        <th>Status</th>
+        <th>Tarifa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transacao of transacoes">
+        <td>{{ transacao.titularConta }}</td>
+        <td>{{ transacao.valor | currency:'BRL' }}</td>
+        <td>{{ transacao.dataTransacao | date:'dd/MM/yyyy' }}</td>
+        <td>{{ transacao.tipoTransacao }}</td>
+        <td>{{ transacao.codigoTransacao }}</td>
+        <td>{{ transacao.statusTransacao }}</td>
+        <td>{{ transacao.tarifa }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-container">
+    <button id="btn-pdf" type="button" (click)="cancelar()">Voltar</button>
+    <button id="btn-print" type="button" (click)="imprimirExtrato()">Imprimir Extrato</button>
+    <button id="btn-pdf" type="button" (click)="gerarPDF()">Gerar PDF</button>
+
+    <!-- <button id="btn-email" type="button" (click)="abrirModal()">Enviar por Email</button> -->
+  </div>
+
+ 
+  <!-- <div id="emailModal" class="modal" [ngClass]="{'show': modalAberto}">
+    <div class="modal-content">
+      <span class="close" (click)="fecharModal()">&times;</span>
+      <h2>Enviar Extrato por Email</h2>
+      <input type="email" [(ngModel)]="email" placeholder="Digite seu email" required>
+      <button type="button" (click)="enviarEmail()">Enviar</button>
+    </div>
+  </div>
+</section> -->

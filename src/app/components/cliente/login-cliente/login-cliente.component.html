@@ -1,0 +1,46 @@
+<section class="card-login-container">
+    <div class="card-login">
+        <div class="card-login-titulo">
+            <h1 class="login-titulo">Acessar sua conta</h1>
+        </div>
+        
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="value0">
+                <input type="number" class="input0" placeholder="Agência" name="agencia">
+                <div *ngIf="loginForm.controls['agencia']?.invalid && loginForm.controls['agencia']?.touched">
+                    <!-- <small *ngIf="loginForm.controls['agencia']?.errors?.['required']">Agência é obrigatória.</small>
+                    <small *ngIf="loginForm.controls['agencia']?.errors?.['minlength']">Agência deve ter 4 dígitos.</small>
+                    <small *ngIf="loginForm.controls['agencia']?.errors?.['maxlength']">Agência deve ter no máximo 4 dígitos.</small> -->
+                </div>
+            </div>
+            <div class="value1">
+                <input type="number" class="input1" placeholder="Conta" name="numConta" [(ngModel)]="numConta">
+                <div *ngIf="loginForm.controls['numConta']?.invalid && loginForm.controls['numConta']?.touched">
+                    <!-- <small *ngIf="loginForm.controls['numConta']?.errors?.['required']">Conta é obrigatória.</small>
+                    <small *ngIf="loginForm.controls['numConta']?.errors?.['minlength']">Conta deve ter 7 dígitos.</small>
+                    <small *ngIf="loginForm.controls['numConta']?.errors?.['maxlength']">Conta deve ter no máximo 7 dígitos.</small> -->
+                </div>
+            </div>
+            <div class="value2">
+                <input type="password" class="input2" placeholder="Senha" name="senha" [(ngModel)]="senha">
+                <div *ngIf="loginForm.controls['senha']?.invalid && loginForm.controls['senha']?.touched">
+                    <small *ngIf="loginForm.controls['senha']?.errors?.['required']">Senha é obrigatória.</small>
+                </div>
+            </div>
+            <div class="check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                        Lembrar
+                    </label>
+                </div>
+                <div>
+                    <p>Esqueceu a senha?</p>
+                </div>
+            </div>
+            <div>
+                <button id="btn-02" type="submit" routerLink="/tela-inicial-cliente" (click)="onSubmit()">Login</button>
+            </div>
+        </form>
+    </div>
+</section>

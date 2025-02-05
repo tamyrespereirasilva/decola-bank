@@ -1,0 +1,41 @@
+<section class="card-login-container">
+    <div class="card-login">
+        <div class="card-login-titulo">
+            <h1 class="login-titulo">Login</h1>
+        </div>
+        
+        <form #loginForm="ngForm">
+            <div class="container-input">
+                <label class="value0">
+                    <input type="text" class="input0" placeholder="Usuário" name="usuario" [(ngModel)]="idAdmin" required maxlength="8" (input)="validateLength($event, 8)">
+                    <div *ngIf="loginForm.controls['usuario']?.invalid && loginForm.controls['usuario']?.touched">
+                        <small *ngIf="loginForm.controls['usuario']?.['errors']?.['required']">Usuário é obrigatório.</small>
+                        <small *ngIf="loginForm.controls['usuario']?.['errors']?.['maxlength']">Máximo de 8 caracteres.</small>
+                    </div>
+                </label>            
+                <label class="value1">
+                    <input type="password" class="input1" placeholder="Senha" name="senha" ngModel required>
+                    <div *ngIf="loginForm.controls['senha']?.invalid && loginForm.controls['senha']?.touched">
+                        <small *ngIf="loginForm.controls['senha']?.['errors']?.['required']">Senha é obrigatória.</small>
+                    </div>
+                </label>
+                <div class="check">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Lembrar
+                        </label>
+                    </div>
+                    <div>
+                        <p>Esqueceu a senha?</p>
+                    </div>
+                </div>
+                <div>
+                    <button id="btn-02" type="submit">
+                        <a class="nav-link" routerLink="/clientes" (click)="onSubmit()">Login</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

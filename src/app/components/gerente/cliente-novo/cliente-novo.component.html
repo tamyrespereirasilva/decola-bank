@@ -1,0 +1,240 @@
+
+<div class="container mt-3">
+  <form #form="ngForm">
+    <div class="card shadow p-4 mb-5">
+      <h3 class="mb-4">Cadastrar Cliente e Conta</h3>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <label for="cpf" class="form-label">CPF</label>
+          <input
+            id="cpf"
+            type="text"
+            class="form-control"
+            name="cpf"
+            [(ngModel)]="cpf"
+            #cpfModel="ngModel"
+            required
+            pattern="^\d{11}$"
+            placeholder="Digite o CPF"
+          />
+          <div *ngIf="cpfModel.touched && cpfModel.invalid" class="text-danger">
+            <div *ngIf="cpfModel.errors?.['required']">O CPF é obrigatório.</div>
+            <div *ngIf="cpfModel.errors?.['pattern']">O CPF deve conter 11 dígitos.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="email"
+            #emailModel="ngModel"
+            required
+            placeholder="Digite o e-mail"
+          />
+          <div *ngIf="emailModel.touched && emailModel.invalid" class="text-danger">
+            <div *ngIf="emailModel.errors?.['required']">O e-mail é obrigatório.</div>
+            <div *ngIf="emailModel.errors?.['email']">E-mail inválido.</div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="mb-2">
+        <label for="nome" class="form-label">Nome Completo</label>
+        <input
+          id="nome"
+          type="text"
+          class="form-control"
+          name="nome"
+          [(ngModel)]="nome"
+          required
+          placeholder="Digite o nome completo"
+        />
+      </div>
+      
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <label for="dataNascimento" class="form-label">Data Nascimento</label>
+          <input
+            id="dataNascimento"
+            type="date"
+            class="form-control"
+            name="dataNascimento"
+            [(ngModel)]="dataNascimento"
+            required
+          />
+        </div>
+  
+
+        <div class="col-md-6">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input
+            id="telefone"
+            type="text"
+            class="form-control"
+            name="telefone"
+            [(ngModel)]="telefone"
+            #telefoneModel="ngModel"
+            required
+            pattern="^\d{11}$"
+            placeholder="Digite o telefone"
+          />
+          <div *ngIf="telefoneModel.touched && telefoneModel.invalid" class="text-danger">
+            <div *ngIf="telefoneModel.errors?.['required']">O telefone é obrigatório.</div>
+            <div *ngIf="telefoneModel.errors?.['pattern']">O telefone deve conter 11 dígitos.</div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <h5 class="mt-2 mb-2">Endereço</h5>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <label for="cep" class="form-label">CEP</label>
+          <input
+            id="cep"
+            type="text"
+            class="form-control"
+            name="cep"
+            [(ngModel)]="cep"
+            required
+            placeholder="Digite o CEP"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input
+            id="endereco"
+            type="text"
+            class="form-control"
+            name="endereco"
+            [(ngModel)]="endereco"
+            required
+            placeholder="Digite o endereço"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-3">
+          <label for="numero" class="form-label">Número</label>
+          <input
+            id="numero"
+            type="text"
+            class="form-control"
+            name="numero"
+            [(ngModel)]="numero"
+            placeholder="Nº"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="complemento" class="form-label">Complemento</label>
+          <input
+            id="complemento"
+            type="text"
+            class="form-control"
+            name="complemento"
+            [(ngModel)]="complemento"
+            placeholder="Complemento"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="bairro" class="form-label">Bairro</label>
+          <input
+            id="bairro"
+            type="text"
+            class="form-control"
+            name="bairro"
+            [(ngModel)]="bairro"
+            placeholder="Digite o bairro"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input
+            id="cidade"
+            type="text"
+            class="form-control"
+            name="cidade"
+            [(ngModel)]="cidade"
+            placeholder="Digite a cidade"
+          />
+        </div>
+      </div>
+
+   
+      <h4 class="mt-4 mb-2">Dados da Conta</h4>
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <label for="tipoConta" class="form-label">Tipo de Conta</label>
+          <select
+            id="tipoConta"
+            class="form-select"
+            name="tipoConta"
+            [(ngModel)]="tipoConta"
+          >
+            <option value="" disabled selected>Selecione</option>
+            <option value="1">Simples</option>
+            <option value="2">Especial</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label for="agencia" class="form-label">Agência</label>
+          <input
+            id="agencia"
+            type="text"
+            class="form-control"
+            name="agencia"
+            [(ngModel)]="agencia"
+            placeholder="Digite a agência"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="senha" class="form-label">Senha Inicial</label>
+          <input
+            id="senha"
+            type="password"
+            class="form-control"
+            name="senha"
+            [(ngModel)]="senha"
+            placeholder="Digite a senha inicial"
+          />
+        </div>
+      </div>
+
+     
+      <div class="d-flex justify-content-between mt-3">
+        <button type="button" class="btn btn-outline-danger" (click)="fechar()">Cancelar</button>
+        <button type="button" class="btn btn-outline-success" (click)="concluir()">Criar Conta</button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="sucessoModal" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Conta criada com sucesso!</h4>
+            <p><strong>Nome:</strong> {{ nome }}</p>
+            <p><strong>Número da Conta:</strong> {{ numConta }}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="fechar()">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

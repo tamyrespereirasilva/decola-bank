@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="table-responsive mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Status Conta</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of clientes">
+                    <td>{{c.cpf}}</td>
+                    <td>{{c.nome}}</td>
+                    <td>{{c.email}}</td>
+                    <td>{{c.telefone}}</td>
+                    <td>{{ getStatusDescricao(c.statusCliente) }}</td>
+
+                    <td>
+                        <a routerLink="/clientes/conta/{{c.id}}"><i class="bi bi-eye me-2"></i></a>  
+                        <a routerLink="/clientes/alterar/{{c.id}}"><i class="bi bi-pencil me-2"></i></a> 
+                        <!-- <a routerLink="/clientes/conta/extrato/{{c.id}}"><i class="bi bi-file-text"></i></a>  -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

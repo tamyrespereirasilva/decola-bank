@@ -1,0 +1,64 @@
+.card-container{
+  /* background-image: url('/assets/transicao.png'); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;  */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 50px; 
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  height: 180px;
+  width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  padding-top: 15px;
+  cursor: pointer; 
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+  border: 1.5px solid #FB8207; 
+}
+
+.card-img-top {
+  margin: 0; 
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  margin-top: 15px; 
+  
+  
+}
+.hello, .modal-title{
+  text-decoration: underline;
+  text-decoration-color: #FB8207;
+  padding-bottom: 15px;
+}
+.saldo, #card1{
+  padding-bottom: 35px;
+}
+
+.card-title {
+  text-align: center; 
+}
+
+.card-text {
+  color: rgb(152, 150, 150);
+  font-weight: 500;
+}
+

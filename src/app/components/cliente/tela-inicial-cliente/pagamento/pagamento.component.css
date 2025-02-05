@@ -1,0 +1,149 @@
+.card-pagamento-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;  
+  position: relative; /* Define um contêiner de referência para posicionamento absoluto */
+}
+
+.card-pagamento {
+  box-shadow: 7px 7px 7px 7px #cbcbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 420px;
+  padding: 20px;
+  padding-bottom: 30px; /* Aumenta o espaço na parte inferior do card */
+  position: relative; /* Define um contêiner de referência para o ícone */
+  border-radius: 10px;
+}
+/* 
+.icon-container {
+  position: absolute;
+  top: 20px; 
+  right: 580px; 
+  z-index: 10; 
+} */
+
+.bi-arrow-left-square {
+  font-size: 30px; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.card-login-titulo {
+  width: 90%; /* Garante que o título ocupe toda a largura do contêiner */
+}
+.title {
+  width: 100%;
+}
+
+.pagamento-title {
+  font-size: 30px;
+  text-align: left;
+  color: #000;
+  padding-top: 5px;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-decoration-color: #FB8207;
+}
+
+.pagamento-sub-title {
+  font-size: 20px;
+  text-align: left;
+  color: #000;
+  padding-bottom: 3px;
+  padding-left: 20px;
+}
+
+.value0, .value1, .value2, .value3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.input0, .input1, .input2, .input3 {
+  background-color: #E7E7E7;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 270px;
+  height: 45px;
+}
+
+.input0::-webkit-inner-spin-button, .input1::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#btn-02 {
+  width: 170px;
+  height: 50px;
+  background-color: #FB8207;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; 
+  margin-bottom: 40px; /* Aumenta o espaço abaixo do botão */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-pagamento {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .input0, .input1, .input2, .input3 {
+    width: 100%;
+  }
+
+  #btn-02 {
+    width: 100%;
+  }
+
+  .icon-container {
+    top: -5px; /* Ajuste conforme necessário para aproximar do card */
+    right: 5px; /* Ajuste conforme necessário para aproximar do card */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-pagamento {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input0, .input1, .input2, .input3 {
+    padding: 8px;
+  }
+
+  #btn-02 {
+    padding: 10px;
+  }
+
+  .pagamento-title {
+    font-size: 24px;
+  }
+
+  .icon-container {
+    top: 10px; /* Ajuste conforme necessário para aproximar do card */
+    right: 40px; /* Ajuste conforme necessário para aproximar do card */
+  }
+}

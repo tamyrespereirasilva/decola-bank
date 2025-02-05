@@ -1,0 +1,40 @@
+.card-title-main-app {
+    color: #FB8207;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.borda {
+    border-radius: 20px;
+}
+
+
+/* Tela média (até 768px) */
+@media (max-width: 768px) {
+    .card-title-main-app {
+        font-size: 32px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .img-app img {
+        width: 100%;
+        height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+        border-radius: 10px;
+    }
+}
+
+/* Tela menor (até 480px) */
+@media (max-width: 480px) {
+    .card-title-main-app {
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .img-app img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+}
