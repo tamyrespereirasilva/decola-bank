@@ -1,8 +1,8 @@
-# PROJETO Fintech - AvaBank #
+# PROJETO Fintech - DecolaBank #
 
-FinTech - AvaBank: Banco Digital para Gerenciamento de Operações Bancárias
+FinTech - DecolaBank: Banco Digital para Gerenciamento de Operações Bancárias
 
-O projeto FinTech - AvaBank é uma aplicação de banco digital desenvolvida no DecolaTech da Avanade em parceria com a Impacta. 
+O DecolaBank é uma aplicação de banco digital desenvolvida no DecolaTech da Avanade em parceria com a Impacta. 
 Seu objetivo principal é permitir que os clientes realizem e registrem operações bancárias essenciais, proporcionando uma experiência digital prática e eficiente para o gerenciamento de contas e transações.
 
 --------------------------------------------
@@ -15,11 +15,12 @@ Seu objetivo principal é permitir que os clientes realizem e registrem operaç�
   
 ------------------------------------------
 
-# Estrutura do Projeto #
+# Ferramentas e Linguagens #
 
-- Frontend: Interfaces criadas com Figma para prototipagem e design visual.
-- Backend: Desenvolvimento do banco de dados e integração com as funcionalidades bancárias essenciais.
-- Banco de Dados: Estrutura de banco de dados modelada utilizando BRModelo.
+- Frontend: Figma, Angular, Typescript e Bootstrap
+- Backend: Java Springboot
+- Banco de Dados: BR Modelo e SQL Server
+- Testes: Postman
 
 ------------------------------------------
 
@@ -32,9 +33,12 @@ Este modelo conceitual foi desenvolvido para representar as principais operaçõ
 - Gerente
 - Cliente
 - Conta
-- Chave Pix
+- Pix
 - Transação
 - Boleto
+- Atribuição
+- Perfis
+- Usuários
 
 ------------------------------------------
 
@@ -42,37 +46,21 @@ Este modelo conceitual foi desenvolvido para representar as principais operaçõ
 
 ## Telas:
 - Home
-- Login Cliente
-- Login Gerente
+- Login Cliente:
+- Operações bancárias: Depósito, Transferência entre contas, Pagamento de boletos, Pix e Extrato.
+- Login Gerente:
+- Crud de Clientes e Conta
 
-------------------------------------------
-
-
-# Próximos passos #
-
-
-- [ ] Criação das demais modelagens de banco de dados (fisica e lógica).
-
-- [ ] Implementação do banco de dados no SQLServer.
-
-- [ ] Desenvolvimento das transações bancárias solicitadas.
-
-- [ ] Integração do banco de dados com o sistema desenvolvido.
-
-- [ ] Refatoração e otimização do código: Revisar o código existente para identificar possíveis melhorias de desempenho, legibilidade e manutenibilidade. Isso pode incluir a eliminação de código duplicado, a aplicação de padrões de design e a otimização de consultas ao banco de dados.
-
-- [ ] Documentação: Documentar o código-fonte, APIs e processos de instalação e configuração para facilitar o entendimento e a manutenção da aplicação por outros desenvolvedores.
-      
 ------------------------------------------
 
 # Equipe de desenvolvedores do Projeto #
 
-
+- **[Tamyres Pereira](https://github.com/TamyresPereiraSilva)**
 - **[Lucemila Bonifácio](https://github.com/LucemilaBonifacio)**
 - **[Paula Florido](https://github.com/paulagvp)**
 - **[Pedro Alves](https://github.com/Peu0508)**
 - **[Suelen Cabral](https://github.com/SueeCabral)**
-- **[Tamyres Pereira](https://github.com/TamyresPereiraSilva)**
+
 
 ---
 
