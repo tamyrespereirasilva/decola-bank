@@ -2,7 +2,7 @@
 
 FinTech - DecolaBank: Banco Digital para Gerenciamento de Operações Bancárias
 
-O DecolaBank é uma aplicação de banco digital desenvolvida no DecolaTech da Avanade em parceria com a Impacta. 
+O DecolaBank é um projeto fullstack, uma imersão Avanade em parceria com a Impacta. 
 Seu objetivo principal é permitir que os clientes realizem e registrem operações bancárias essenciais, proporcionando uma experiência digital prática e eficiente para o gerenciamento de contas e transações.
 
 -----------------------------------------
